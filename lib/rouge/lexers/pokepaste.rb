@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rouge'
+
 require_relative 'pokepaste/tokens'
 require_relative 'pokepaste/data'
 
@@ -13,7 +15,7 @@ module Rouge
 
       state :root do
         mon = /[A-Z][a-z0-9:']+\.?(?:[- ][A-Za-z][a-z0-9:']*\.?)*/
-          
+
         rule %r/ +\n/, Text
         rule %r/(?:(?<pre>.* \()(?<mon1>#{mon})(?<post>\))|(?<mon2>#{mon}))/ do |m|
           if m[:mon1]

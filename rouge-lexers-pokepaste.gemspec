@@ -9,4 +9,6 @@ Gem::Specification.new do |s|
   s.license = 'BSD-3-Clause'
   s.summary = 'Rouge lexer for PokePaste / PS / PKHex import / exports'
   s.files   = Dir['LICENSE', 'rouge-lexers-pokepaste.gemspec', 'lib/rouge/lexers/pokepaste.rb', 'lib/rouge/lexers/pokepaste/*.rb']
+
+  s.add_runtime_dependency 'rouge'
 end
